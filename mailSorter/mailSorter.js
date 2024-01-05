@@ -8,7 +8,7 @@ async function createSelectionBody() {
     let accounts = await messenger.accounts.list();
 
     // Get the body from the document to append the label and the selection box
-    let body = document.querySelector("body");
+    let body = document.getElementById("mailSorterDiv");
 
     // Create the paragraph for the account selection
     let paragraphAccountSelection = document.createElement("p");
