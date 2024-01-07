@@ -1,6 +1,16 @@
-.mailsorter {
+.mailSorter {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    height: 60px;
     padding: 10px;
+}
+
+.startButton {
+    background-image: url(../images/start_icon.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-inline: 30px;
+}
+
+label{
+    display: block;
+    padding-bottom: 5px;
 }

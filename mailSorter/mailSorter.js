@@ -16,7 +16,7 @@ async function createSelectionBody() {
     // Create the label for the selection box
     let labelForSelectBox = document.createElement("label");
     labelForSelectBox.setAttribute("for", "accountSelectionSource");
-    labelForSelectBox.innerHTML = "Please select the account for sorting the mails";
+    labelForSelectBox.innerHTML = "Please select the account where the folder resides which should be sorted";
     paragraphAccountSelection.appendChild(labelForSelectBox);
 
     // Create the select box and add the available accounts and append the box to the body
@@ -40,7 +40,7 @@ async function createSelectionBody() {
     // Create the folder selection, to determine which folder should be sorted
     let labelForFolderSelection = document.createElement("label");
     labelForFolderSelection.setAttribute("for", "folderSelectionSource");
-    labelForFolderSelection.innerHTML = "Please select the folder for sorting the mails";
+    labelForFolderSelection.innerHTML = "Please select the folder which should be sorted";
     paragraphFolderSelection.appendChild(labelForFolderSelection);
 
     // Create the folder selction box and append the selection box to the body
@@ -57,7 +57,7 @@ async function createSelectionBody() {
         // Create the label for the selection box
     let labelAccountSelectionTarget = document.createElement("label");
     labelAccountSelectionTarget.setAttribute("for", "accountSelectionTarget");
-    labelAccountSelectionTarget.innerHTML = "Please select the account as target for sorting the mails";
+    labelAccountSelectionTarget.innerHTML = "Please select the account where the folder resides which should be used as target for the sorting process";
     paragraphAccountSelectionTarget.appendChild(labelAccountSelectionTarget);
     
         // Create the select box and add the available accounts and append the box to the body
@@ -81,7 +81,7 @@ async function createSelectionBody() {
     // Create the folder selection, to determine which folder should be sorted
     let labelFolderSelectionTarget = document.createElement("label");
     labelFolderSelectionTarget.setAttribute("for", "folderSelectionTarget");
-    labelFolderSelectionTarget.innerHTML = "Please select the folder to store the sorted mails";
+    labelFolderSelectionTarget.innerHTML = "Please select the folder where the sorted mails will be stored";
     paragraphFolderSelectionTarget.appendChild(labelFolderSelectionTarget);
 
     // Create the folder selction box and append the selection box to the body
@@ -95,9 +95,10 @@ async function createSelectionBody() {
     // Create the button to start the sorting
     let paragraphStartButton = document.createElement("p");
     let startButton = document.createElement("button");
-    startButton.innerHTML = "Start sorting mails";
+    startButton.innerHTML = "Start";
     startButton.name = "startButton";
     startButton.id = "startButton";
+    startButton.className = "startButton";
     startButton.onclick = startSort;
     paragraphStartButton.appendChild(startButton);
     body.appendChild(paragraphStartButton);
